@@ -1,5 +1,4 @@
 #include <WiFi.h>
-// #include <FirebaseClient.h>
 #include<Firebase_ESP_Client.h>
 
 // WiFi credentials
