@@ -1,9 +1,9 @@
 #include <WiFi.h>
 #include<Firebase_ESP_Client.h>
-
+#include <Arduino.h>
 // WiFi credentials
-#define WIFI_SSID "Anika"
-#define WIFI_PASSWORD "Amirul#Anju23"
+#define WIFI_SSID "flat 69"
+#define WIFI_PASSWORD "kochurlotirgoa"
 
 // Firebase settings
 #define FIREBASE_HOST "https://esp32controller-3e341-default-rtdb.firebaseio.com/" // e.g., "your-project-id.firebaseio.com"
@@ -20,14 +20,14 @@ FirebaseConfig config;
 int pin=15;
 //start 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(pin, OUTPUT); // Use built-in LED pin
 
   // Connect to Wi-Fi
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("Connecting to Wi-Fi...");
+    Serial.println("Connecting to Wi-Fi..");
   }
   Serial.println("Connected to Wi-Fi");
 
@@ -61,6 +61,3 @@ if (Firebase.ready() && (millis() - sendDataPrevMillis > 1000 || sendDataPrevMil
    }
   }
 }
-
-
-
